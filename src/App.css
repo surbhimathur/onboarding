@@ -1,38 +1,274 @@
-.App {
+*{
+  padding:0;
+  margin:0;
+  overflow-x:hidden;
+}
+body{
+  font-family: 'Inter', sans-serif;
+}
+.home{
+  max-width:1000px;
+  margin:20px auto;
+}
+.welcome{
+  margin:20px auto;
+  width:420px; 
+}
+.workspace{
+  width:520px;
+}
+.logo img{
+  height:30px;
+  width:30px;
+}
+.logo{
+ 
+  margin:0px auto;
+  width:100px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.logo p{
+  font-size:25px;
+  font-weight:600;
+}
+.heading{
+  margin:20px auto;
+  width:95%;
+}
+.heading h2{
+  font-size:27px;
+  text-align:center;
+}
+.heading h4{
+  margin-top:10px;
+  color:grey;
+  font-weight:400;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.userform{
+  width:90%;
+  margin:40px 20px 0px 20px;
+}
+.workspace_form{
+  width:75%;
+  margin:40px auto 0px auto;
+}
+.userform p{
+  margin:20px 0px 5px 0px;
+  font-size:14px;
+  font-weight:500;
+  color:rgb(69, 70, 70);
+}
+.userform input{
+  width:95%;
+  height:35px;
+  border-radius:5px;
+  border:1px solid rgb(208, 207, 207);
+  padding:5px;
+  outline:none;
+ 
+}
+.create_workspace
+{
+width:100%;
+margin:20px 0px;
+padding:15px;
+border-radius:5px;
+background-color:rgb(102,77,230);
+border:none;
+color:white;
+font-size:14px;
+letter-spacing:0.3px;
+cursor:pointer;
+}
+.pages{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+justify-content:center;
+  margin:80px auto;
+  width:70%;
+}
+.page1,.page2,.page3,.page4{
+  padding:10px 15px;
+  border:1px solid rgb(205, 202, 202);
+  border-radius:50%;
+  font-weight:400;
+  color:grey;
+}
+.page1,.page2_active,.page3_active,.page4_active{
+  background-color:rgb(102,77,230);
+  color:white;
+  border:1px solid rgb(102,77,230);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.divider_page2,.divider_page3{
+  border:1px solid rgb(205, 202, 202);
+  width:50px;
+  background-color:rgb(205, 202, 202);
+}
+
+.divider_page1{
+  border:1px solid rgb(102,77,230);
+  width:25px;
+  background-color:rgb(102,77,230);
+}
+.divider_page_half{
+  border:1px solid rgb(205, 202, 202);
+  width:25px;
+  background-color:rgb(205, 202, 202);
+}
+.divider_page_full{
+  border:1px solid rgb(102,77,230);
+  width:25px;
+  background-color:rgb(102,77,230);
+}
+.divider_page2_active,.divider_page3_active{
+  border:1px solid rgb(102,77,230);
+  width:25px;
+  background-color:rgb(102,77,230);
+}
+span{
+  color:rgb(194, 189, 189);
+}
+.workspace_url{
+  border:1px solid rgb(208, 207, 207);
+  display:flex;
+  border-radius:5px;
+  align-items:center;
+  padding-left:10px;
+  justify-content:space-between;
+  background-color:rgba(248,249,253);
+  width:95%;
+}
+
+.workspace_url p{
+  margin:0px;
+  width:30%;
+color:grey;
+font-size:14px;
+}
+.workspace_url input{
+  width:65%;
+  border-radius:0;
+  border:none;
+outline:none;
+padding-left:10px;
+border-left:1px solid rgb(176, 175, 175);
+}
+.planning_options{
+  display:flex;
+  flex-direction:row;
+  width:100%;
+  justify-content:space-between;
+  margin:0 auto;
+}
+.for_myself,.with_team{
+  width:37%;
+  border-radius:5px;
+  padding:15px;
+}
+.for_myself{
+  border:1px solid rgb(102,77,230);
+}
+.for_myself:hover{
+  border:1px solid rgb(102,77,230);
+  cursor:pointer;
+}
+.with_team{
+  border:1px solid rgb(205, 202, 202);
+}
+.with_team:hover{
+  border:1px solid rgb(102,77,230);
+  cursor:pointer;
+}
+.for_myself img,.with_team img{
+  height:30px;
+  width:30px;
+}
+#for_myself_heading,#with_team_heading{
+  font-size:16px;
+ font-weight:600;
+}
+#for_myself_desc,#with_team_desc{
+  margin-top:10px;
+  color:grey;
+  font-size:14px;
+  font-weight:400;
+  line-height:1.5;
+}
+.completed_box{
+  height:60px;
+  width:60px;
+  border-radius:50%;
+  background-color:rgb(102,77,230);
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0px auto 30px auto;
+}
+
+@media(min-width:350px){
+  .welcome{
+    width:100%; 
+  }
+  .pages{
+    width:90%;
+  }
+  .workspace_form{
+    width:90%;
+  }
+  .workspace_url p{
+    width:35%;
+  font-size:12px;
+  }
+  .heading h2{
+    font-size:25px;
+  }
+  .userform{
+  
+    margin:40px auto 0px auto;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media(min-width:400px){
+  .workspace_url p{
+    width:35%;
+  font-size:14px;
   }
-  to {
-    transform: rotate(360deg);
+  
+}
+@media(min-width:500px){
+  .welcome{
+    width:470px; 
   }
+  .pages{
+    width:70%;
+  }
+  .workspace_form{
+    width:80%;
+  }
+ 
+  .userform{
+    
+    width:80%;
+    
+   
+  }
+  
+}
+@media(min-width:700px){
+  .welcome{
+    width:500px;
+  }
+  
+  .heading h2{
+    font-size:27px;
+  }
+  .workspace_form{
+    width:75%;
+  }
+  
 }
